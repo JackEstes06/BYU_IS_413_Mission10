@@ -1,3 +1,6 @@
+using BowlingProject.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<BowlerDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("BowlerConnection")));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -15,6 +20,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// **Ensure middleware order is correct**
+app.UseCors(x => x.WithOrigins("http://localhost:3000"));
 
 app.UseHttpsRedirection();
 
