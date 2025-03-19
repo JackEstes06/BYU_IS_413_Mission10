@@ -1,6 +1,7 @@
 using BowlingProject.Data;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BowlingProject.Controllers
 {
@@ -17,7 +18,9 @@ namespace BowlingProject.Controllers
         [HttpGet(Name = "GetBowler")]
         public IEnumerable<Bowler> Get()
         {
-            IEnumerable<Bowler> bowlerList = _context.Bowlers.ToList();
+            IEnumerable<Bowler> bowlerList = _context.Bowlers
+                .Include(x => x.Team)
+                .ToList();
             return bowlerList;
         }
     }

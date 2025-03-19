@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BowlingProject.Data;
 
@@ -21,6 +22,8 @@ public class Bowler
     public string BowlerZip { get; set; }
     [Required]
     public string BowlerPhoneNumber { get; set; }
-    [Required]
+    
+    [ForeignKey("TeamID")]
     public int TeamID { get; set; }
+    public Team Team { get; set; }
 }
