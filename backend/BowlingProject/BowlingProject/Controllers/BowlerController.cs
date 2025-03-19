@@ -20,6 +20,7 @@ namespace BowlingProject.Controllers
         {
             IEnumerable<Bowler> bowlerList = _context.Bowlers
                 .Include(x => x.Team)
+                .Where(x => x.Team.TeamName == "Marlins" || x.Team.TeamName == "Sharks")
                 .ToList();
             return bowlerList;
         }

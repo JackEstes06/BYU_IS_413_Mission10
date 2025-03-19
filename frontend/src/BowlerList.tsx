@@ -17,7 +17,6 @@ function BowlerList() {
   return (
     <>
       <div className="container mt-4">
-        <h1 className="mb-4 text-center">Bowler List</h1>
         <div className="table-responsive">
           <table className="table table-striped table-bordered">
             <thead className="thead-dark">
