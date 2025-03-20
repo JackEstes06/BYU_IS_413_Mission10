@@ -11,6 +11,13 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<BowlerDbContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("BowlerConnection")));
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000").AllowCredentials().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -22,7 +29,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // **Ensure middleware order is correct**
-app.UseCors(x => x.WithOrigins("http://localhost:3000"));
+app.UseCors("AllowFrontend");
 
 app.UseHttpsRedirection();
 

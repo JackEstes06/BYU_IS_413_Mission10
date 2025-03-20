@@ -6959,24 +6959,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/jackestes/.nuget/packages/": {}
+    "C:\\Users\\jacke\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/jackestes/Documents/Current Semester/IS_413/Missions/Mission10_Estes/backend/BowlingProject/BowlingProject/BowlingProject.csproj",
+      "projectUniqueName": "C:\\Users\\jacke\\RiderProjects\\BYU_IS413\\Missions\\Mission10_Estes\\backend\\BowlingProject\\BowlingProject\\BowlingProject.csproj",
       "projectName": "BowlingProject",
-      "projectPath": "/Users/jackestes/Documents/Current Semester/IS_413/Missions/Mission10_Estes/backend/BowlingProject/BowlingProject/BowlingProject.csproj",
-      "packagesPath": "/Users/jackestes/.nuget/packages/",
-      "outputPath": "/Users/jackestes/Documents/Current Semester/IS_413/Missions/Mission10_Estes/backend/BowlingProject/BowlingProject/obj/",
+      "projectPath": "C:\\Users\\jacke\\RiderProjects\\BYU_IS413\\Missions\\Mission10_Estes\\backend\\BowlingProject\\BowlingProject\\BowlingProject.csproj",
+      "packagesPath": "C:\\Users\\jacke\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jacke\\RiderProjects\\BYU_IS413\\Missions\\Mission10_Estes\\backend\\BowlingProject\\BowlingProject\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/jackestes/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jacke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7048,7 +7056,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/jackestes/.dotnet/sdk/8.0.404/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
